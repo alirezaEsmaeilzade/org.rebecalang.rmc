@@ -62,6 +62,9 @@ public class TimedRebecaFileGenerator extends CoreRebecaFileGenerator {
 
 			super.createMain(FilesNames.MAIN_PATCH_TEMPLATE);
 
+			ConvertNetwork convertNetwork = new ConvertNetwork((TimedRebecaCode) rebecaModel.getRebecaCode());
+			convertNetwork.changeRebecaCode();
+
 			super.createTypeAndConfig(FilesNames.CONFIG_PATCH_TEMPLATE);
 
 			List<String> patches = new LinkedList<String>();
